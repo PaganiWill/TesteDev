@@ -1,7 +1,7 @@
 # Teste desenvolvedor backend
 
 Projeto de uma API de cadastro de funcionários, a qual possibilita fazer a listagem de todos os funcionários, filtrar por id, atualizar, e excluir os registros.
-Foi utilizado a linguagem Java, Spring Boot, banco de dados H2. Por ora não será implementado até eu ter conhecimento para fazê-lo.
+Foi utilizado a linguagem Java, Spring Boot, banco de dados H2(é um banco de dados em memória, então toda vez que a aplicação for iniciada, seus registros antigos serão apagados). Por ora não será implementado até eu ter conhecimento para fazê-lo.
 
 Para acessar o console do banco de dados, acesse o link http://localhost:8080/h2-console e coloque as informações da tela
 ![image](https://user-images.githubusercontent.com/74219111/203701477-a42a4171-c7e7-473f-8767-63ba0119503d.png)
