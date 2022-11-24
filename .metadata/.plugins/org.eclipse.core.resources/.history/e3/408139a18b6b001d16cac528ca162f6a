@@ -1,0 +1,64 @@
+package com.testedev.teste_desenvolvedor.entities;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "tb_funcionarios")
+public class Funcionarios{
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer id;
+	private String nomeFuncionario;
+	private String sobrenomeFuncionario;
+	private String email;
+	private Long nis;
+	
+	public Funcionarios() {	
+	}
+	
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getNomeFuncionario() {
+		return nomeFuncionario;
+	}
+
+	public void setNomeFuncionario(String nomeFuncionario) {
+		this.nomeFuncionario = nomeFuncionario;
+	}
+
+	public String getSobrenomeFuncionario() {
+		return sobrenomeFuncionario;
+	}
+
+	public void setSobrenomeFuncionario(String sobrenomeFuncionario) {
+		this.sobrenomeFuncionario = sobrenomeFuncionario;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public Long getNis() {
+		return nis;
+	}
+
+	public void setNis(Long nis) {
+		this.nis = nis;
+	}
+	
+}

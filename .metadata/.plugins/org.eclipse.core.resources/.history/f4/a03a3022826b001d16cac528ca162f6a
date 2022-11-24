@@ -1,0 +1,14 @@
+package com.testedev.teste_desenvolvedor.repositories;
+
+import java.util.ArrayList;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+
+import com.testedev.teste_desenvolvedor.entities.Funcionarios;
+
+public interface FuncionarioRepository extends JpaRepository<Funcionarios, Integer>{
+	
+	ArrayList<Funcionarios> findAllFuncionarios();
+	
+}

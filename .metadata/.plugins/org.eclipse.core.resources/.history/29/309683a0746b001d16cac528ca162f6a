@@ -1,0 +1,8 @@
+package com.testedev.teste_desenvolvedor.entities;
+
+import javax.persistence.Entity;
+
+public class Funcionarios {
+	
+	
+}

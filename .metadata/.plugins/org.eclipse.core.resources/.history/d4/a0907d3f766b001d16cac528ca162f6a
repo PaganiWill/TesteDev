@@ -1,0 +1,5 @@
+package com.testedev.teste_desenvolvedor.repositories;
+
+public interface FuncionarioRepository {
+
+}

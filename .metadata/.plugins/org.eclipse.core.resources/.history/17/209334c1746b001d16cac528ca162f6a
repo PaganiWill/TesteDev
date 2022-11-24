@@ -1,0 +1,26 @@
+package com.testedev.teste_desenvolvedor.entities;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "tb_funcionarios")
+public class Funcionarios {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer id;
+	private String nomeFuncionario;
+	private String sobrenomeFuncionario;
+	private String email;
+	private Long nis;
+	
+	public Funcionarios() {
+		
+	}
+	
+	
+}

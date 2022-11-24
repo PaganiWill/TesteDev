@@ -1,0 +1,42 @@
+package com.testedev.teste_desenvolvedor.services;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.testedev.teste_desenvolvedor.entities.Funcionarios;
+import com.testedev.teste_desenvolvedor.repositories.FuncionarioRepository;
+
+@Service
+public class FuncionarioService {
+	
+	@Autowired
+	private FuncionarioRepository repository;
+	
+	public List<Funcionarios> findAll() {
+		return repository.findAll();
+	}
+	
+	public Funcionarios findById(Long id) {
+		return repository.findById(id).get();
+	}
+	
+	public Funcionarios insert(Funcionarios funcionario) {
+		return repository.save(funcionario);
+	}
+	
+	public Funcionarios atualizar(Long id, Funcionarios funcionario) {
+		Funcionarios  func = repository.getById(id);
+		
+		
+		return null;
+	}
+	
+	public void deleteById(Long id) {
+		repository.deleteById(id);
+	}
+	
+	
+}

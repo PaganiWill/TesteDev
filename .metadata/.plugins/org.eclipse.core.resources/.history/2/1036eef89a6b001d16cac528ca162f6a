@@ -1,0 +1,39 @@
+package com.testedev.teste_desenvolvedor.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.testedev.teste_desenvolvedor.entities.Funcionarios;
+import com.testedev.teste_desenvolvedor.services.FuncionarioService;
+
+@RestController
+@RequestMapping(value = "/funcionarios")
+public class FuncionarioController {
+	
+	@Autowired
+	public FuncionarioService service;
+
+	@GetMapping
+	public List<Funcionarios> findAll(){
+		return service.findAll();
+	}
+	
+	@GetMapping(value = "/buscar/{id}")
+	public Funcionarios findById(@PathVariable Long id){
+		return service.findById(id);
+	}
+	
+	@DeleteMapping(value = "/remover/{id}")
+	public String deleteById(@PathVariable Long id) {
+		
+		service.deleteById(id);
+		
+		return "Deu certo";
+	}
+}
